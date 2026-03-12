@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * 鏁版嵁璐ㄩ噺鎸囨爣鍝嶅簲 DTO
+ * 数据质量指标响应 DTO
  */
 @Data
 @Builder
@@ -28,7 +28,7 @@ public class QualityMetricsResponse {
     private LocalDateTime createdAt;
     
     /**
-     * 浠?QualityMetrics 瀹炰綋杞崲涓?QualityMetricsResponse
+     * 从QualityMetrics实体转换为QualityMetricsResponse
      */
     public static QualityMetricsResponse from(QualityMetrics metrics) {
         return QualityMetricsResponse.builder()

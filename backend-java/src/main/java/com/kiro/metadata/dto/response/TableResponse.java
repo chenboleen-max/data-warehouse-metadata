@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 琛ㄥ搷搴?DTO
+ * 表响应 DTO
  */
 @Data
 @Builder
@@ -36,7 +36,7 @@ public class TableResponse {
     private List<ColumnResponse> columns;
     
     /**
-     * 浠?TableMetadata 瀹炰綋杞崲涓?TableResponse
+     * 从TableMetadata实体转换为TableResponse
      */
     public static TableResponse from(TableMetadata table) {
         return TableResponse.builder()
@@ -60,7 +60,7 @@ public class TableResponse {
     }
     
     /**
-     * 浠?TableMetadata 瀹炰綋杞崲涓?TableResponse锛堜笉鍖呭惈瀛楁鍒楄〃锛?
+     * 从TableMetadata 实体杞崲涓?TableResponse锛堜笉鍖呭惈瀛楁鍒楄〃锛?
      */
     public static TableResponse fromWithoutColumns(TableMetadata table) {
         return TableResponse.builder()

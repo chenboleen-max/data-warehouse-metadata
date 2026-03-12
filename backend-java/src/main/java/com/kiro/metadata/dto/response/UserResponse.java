@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * 鐢ㄦ埛鍝嶅簲 DTO
+ * 用户响应 DTO
  */
 @Data
 @Builder
@@ -29,7 +29,7 @@ public class UserResponse {
     private LocalDateTime lastLoginAt;
     
     /**
-     * 浠?User 瀹炰綋杞崲涓?UserResponse
+     * 从User实体转换为UserResponse
      */
     public static UserResponse from(User user) {
         return UserResponse.builder()

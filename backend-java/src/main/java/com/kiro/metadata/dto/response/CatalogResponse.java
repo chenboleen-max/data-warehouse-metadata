@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 鏁版嵁鐩綍鍝嶅簲 DTO
+ * 数据目录响应 DTO
  */
 @Data
 @Builder
@@ -32,7 +32,7 @@ public class CatalogResponse {
     private List<CatalogResponse> children;
     
     /**
-     * 浠?Catalog 瀹炰綋杞崲涓?CatalogResponse
+     * 从Catalog实体转换为CatalogResponse
      */
     public static CatalogResponse from(Catalog catalog) {
         return CatalogResponse.builder()

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * 瀛楁鍝嶅簲 DTO
+ * 字段响应 DTO
  */
 @Data
 @Builder
@@ -30,7 +30,7 @@ public class ColumnResponse {
     private LocalDateTime updatedAt;
     
     /**
-     * 浠?ColumnMetadata 瀹炰綋杞崲涓?ColumnResponse
+     * 从ColumnMetadata实体转换为ColumnResponse
      */
     public static ColumnResponse from(ColumnMetadata column) {
         return ColumnResponse.builder()

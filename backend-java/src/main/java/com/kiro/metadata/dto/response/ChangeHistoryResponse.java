@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * 鍙樻洿鍘嗗彶鍝嶅簲 DTO
+ * 变更历史响应 DTO
  */
 @Data
 @Builder
@@ -30,7 +30,7 @@ public class ChangeHistoryResponse {
     private UserResponse changedBy;
     
     /**
-     * 浠?ChangeHistory 瀹炰綋杞崲涓?ChangeHistoryResponse
+     * 从ChangeHistory实体转换为ChangeHistoryResponse
      */
     public static ChangeHistoryResponse from(ChangeHistory history) {
         return ChangeHistoryResponse.builder()
