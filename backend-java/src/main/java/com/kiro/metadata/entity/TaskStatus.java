@@ -1,27 +1,27 @@
 package com.kiro.metadata.entity;
 
 /**
- * Task status enumeration
- * Defines the status of export tasks
+ * 任务状态枚举
+ * 定义导出任务的状态
  */
 public enum TaskStatus {
     /**
-     * Task is pending execution
+     * 任务等待执行
      */
     PENDING,
     
     /**
-     * Task is currently running
+     * 任务正在运行
      */
     RUNNING,
     
     /**
-     * Task completed successfully
+     * 任务成功完成
      */
     COMPLETED,
     
     /**
-     * Task failed with error
+     * 任务失败并出错
      */
     FAILED
 }

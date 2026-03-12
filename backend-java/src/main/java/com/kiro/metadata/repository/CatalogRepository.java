@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Catalog repository
+ * 目录仓库
  */
 @Repository
 public interface CatalogRepository extends JpaRepository<Catalog, String> {

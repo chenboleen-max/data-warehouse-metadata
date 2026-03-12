@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Change history repository
+ * 变更历史仓库
  */
 @Repository
 public interface ChangeHistoryRepository extends JpaRepository<ChangeHistory, String> {

@@ -1,17 +1,17 @@
 package com.kiro.metadata.entity;
 
 /**
- * Export type enumeration
- * Defines the export file formats
+ * 导出类型枚举
+ * 定义导出文件格式
  */
 public enum ExportType {
     /**
-     * CSV format
+     * CSV格式
      */
     CSV,
     
     /**
-     * JSON format
+     * JSON格式
      */
     JSON
 }

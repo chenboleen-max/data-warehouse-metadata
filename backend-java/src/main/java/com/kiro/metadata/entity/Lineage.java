@@ -12,8 +12,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 /**
- * Lineage entity
- * Represents a lineage relationship between two tables
+ * 血缘关系实体
+ * 表示两个表之间的血缘关系
  */
 @Entity
 @Table(name = "lineage",

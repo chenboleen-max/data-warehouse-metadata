@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Token response DTO
+ * 令牌响应 DTO
  */
 @Data
 @Builder
