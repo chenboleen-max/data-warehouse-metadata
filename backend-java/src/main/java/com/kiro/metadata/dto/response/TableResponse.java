@@ -60,7 +60,7 @@ public class TableResponse {
     }
     
     /**
-     * 从TableMetadata 实体杞崲涓?TableResponse锛堜笉鍖呭惈瀛楁鍒楄〃锛?
+     * 从TableMetadata实体转换为TableResponse（不包含字段列表）
      */
     public static TableResponse fromWithoutColumns(TableMetadata table) {
         return TableResponse.builder()
