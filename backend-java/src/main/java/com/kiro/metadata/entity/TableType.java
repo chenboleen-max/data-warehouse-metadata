@@ -6,7 +6,7 @@ package com.kiro.metadata.entity;
  */
 public enum TableType {
     /**
-     * Regular table
+     * 普通表
      */
     TABLE,
     
@@ -16,7 +16,7 @@ public enum TableType {
     VIEW,
     
     /**
-     * External table
+     * 外部表
      */
     EXTERNAL
 }

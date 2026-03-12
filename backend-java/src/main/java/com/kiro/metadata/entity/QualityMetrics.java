@@ -13,7 +13,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 /**
- * Quality metrics entity
+ * 质量指标实体
  * Represents data quality metrics for a table
  */
 @Entity

@@ -6,17 +6,17 @@ package com.kiro.metadata.entity;
  */
 public enum OperationType {
     /**
-     * Create operation
+     * 创建操作
      */
     CREATE,
     
     /**
-     * Update operation
+     * 更新操作
      */
     UPDATE,
     
     /**
-     * Delete operation
+     * 删除操作
      */
     DELETE
 }

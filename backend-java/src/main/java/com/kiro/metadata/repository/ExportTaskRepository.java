@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Export task repository
+ * 导出任务仓库
  */
 @Repository
 public interface ExportTaskRepository extends JpaRepository<ExportTask, String> {

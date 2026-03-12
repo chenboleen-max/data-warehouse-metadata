@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * User repository
+ * 用户仓库
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {

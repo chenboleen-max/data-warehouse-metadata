@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Catalog entity
+ * 目录实体
  * Represents a catalog node in the hierarchical data catalog
  */
 @Entity

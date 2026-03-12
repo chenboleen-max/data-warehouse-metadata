@@ -3,7 +3,7 @@ package com.kiro.metadata.exception;
 import org.springframework.http.HttpStatus;
 
 /**
- * Resource not found exception
+ * 资源未找到异常
  */
 public class ResourceNotFoundException extends BusinessException {
     

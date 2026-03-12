@@ -12,8 +12,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 /**
- * User entity
- * Represents a user in the metadata management system
+ * 用户实体
+ * 表示元数据管理系统中的用户
  */
 @Entity
 @Table(name = "users", 

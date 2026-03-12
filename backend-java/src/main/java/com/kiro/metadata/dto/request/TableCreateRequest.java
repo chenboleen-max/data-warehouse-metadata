@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Table create request DTO
+ * 表创建请求 DTO
  */
 @Data
 @NoArgsConstructor

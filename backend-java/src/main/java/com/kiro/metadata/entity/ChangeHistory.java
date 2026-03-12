@@ -9,7 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 import java.time.LocalDateTime;
 
 /**
- * Change history entity
+ * 变更历史实体
  * Tracks changes to metadata entities
  */
 @Entity

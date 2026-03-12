@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 /**
- * Column metadata entity
+ * 字段元数据实体
  * Represents a column in a table
  */
 @Entity

@@ -6,13 +6,13 @@ package com.kiro.metadata.entity;
  */
 public enum UserRole {
     /**
-     * Guest role - read-only access
+     * 访客角色 - read-only access
      * Can only query metadata
      */
     GUEST,
     
     /**
-     * Developer role - read and update access
+     * 开发者角色 - read and update access
      * Can query and edit metadata annotations
      */
     DEVELOPER,

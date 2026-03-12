@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Table update request DTO
+ * 表更新请求 DTO
  */
 @Data
 @NoArgsConstructor

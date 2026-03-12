@@ -11,7 +11,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 /**
- * Export task entity
+ * 导出任务实体
  * Represents an asynchronous export task
  */
 @Entity

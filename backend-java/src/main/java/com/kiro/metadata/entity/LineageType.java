@@ -6,12 +6,12 @@ package com.kiro.metadata.entity;
  */
 public enum LineageType {
     /**
-     * Direct lineage - direct dependency between tables
+     * 直接血缘 - direct dependency between tables
      */
     DIRECT,
     
     /**
-     * Indirect lineage - indirect dependency through intermediate tables
+     * In直接血缘 - indirect dependency through intermediate tables
      */
     INDIRECT
 }

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Table metadata entity
+ * 表元数据实体
  * Represents a table in the data warehouse
  */
 @Entity
