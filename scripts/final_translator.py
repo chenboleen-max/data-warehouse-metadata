@@ -182,6 +182,76 @@ EXCEPTION_MESSAGES = {
     "lineage not found": "血缘关系未找到",
 }
 
+# 验证消息翻译（用于 @NotBlank, @NotNull, @Size 等注解）
+VALIDATION_MESSAGES = {
+    # Database 相关
+    "Database name cannot be blank": "数据库名称不能为空",
+    "Database name length must be between 1-100": "数据库名称长度必须在1-100之间",
+    
+    # Table 相关
+    "Table name cannot be blank": "表名不能为空",
+    "Table name length must be between 1-100": "表名长度必须在1-100之间",
+    "Table type cannot be null": "表类型不能为空",
+    "Table ID cannot be null": "表ID不能为空",
+    
+    # Column 相关
+    "Column name cannot be blank": "字段名不能为空",
+    "Column name length must be between 1-100": "字段名长度必须在1-100之间",
+    "Column order cannot be null": "字段顺序不能为空",
+    "Column order must be greater than 0": "字段顺序必须大于0",
+    
+    # Data type 相关
+    "Data type cannot be blank": "数据类型不能为空",
+    "Data type length must be between 1-50": "数据类型长度必须在1-50之间",
+    
+    # Description 相关
+    "Description length cannot exceed 1000": "描述长度不能超过1000",
+    "Description length cannot exceed 500": "描述长度不能超过500",
+    
+    # Storage 相关
+    "Storage format length cannot exceed 50": "存储格式长度不能超过50",
+    "Storage location length cannot exceed 500": "存储位置长度不能超过500",
+    
+    # Data size 相关
+    "Data size cannot be negative": "数据大小不能为负数",
+    
+    # Catalog 相关
+    "Catalog name cannot be blank": "目录名称不能为空",
+    "Catalog name length must be between 1-100": "目录名称长度必须在1-100之间",
+    
+    # Username/Password 相关
+    "Username cannot be blank": "用户名不能为空",
+    "Username length must be between 3-50": "用户名长度必须在3-50之间",
+    "Password cannot be blank": "密码不能为空",
+    "Password length must be at least 6": "密码长度至少为6",
+    
+    # Refresh token 相关
+    "Refresh token cannot be blank": "刷新令牌不能为空",
+    
+    # Source/Target 相关
+    "Source table ID cannot be null": "源表ID不能为空",
+    "Target table ID cannot be null": "目标表ID不能为空",
+    
+    # Lineage 相关
+    "Lineage type cannot be null": "血缘类型不能为空",
+    "Transformation logic length cannot exceed 5000": "转换逻辑长度不能超过5000",
+    
+    # Export 相关
+    "Export type cannot be null": "导出类型不能为空",
+    
+    # Search 相关
+    "Keyword cannot be blank": "关键词不能为空",
+    "Keyword length cannot exceed 200": "关键词长度不能超过200",
+    
+    # Page 相关
+    "Page number must be greater than or equal to 0": "页码必须大于或等于0",
+    "Page size must be between 1 and 100": "每页大小必须在1-100之间",
+    
+    # Column order 相关
+    "Column orders cannot be null": "字段顺序不能为空",
+    "Column orders cannot be empty": "字段顺序不能为空",
+}
+
 
 def translate_javadoc(content: str) -> str:
     """翻译 Javadoc 注释"""
@@ -199,6 +269,15 @@ def translate_exception_message(content: str) -> str:
     for en, zh in EXCEPTION_MESSAGES.items():
         pattern = re.compile(re.escape(en), re.IGNORECASE)
         result = pattern.sub(zh, result)
+    return result
+
+
+def translate_validation_message(content: str) -> str:
+    """翻译验证消息"""
+    result = content
+    for en, zh in VALIDATION_MESSAGES.items():
+        # 精确匹配，不忽略大小写
+        result = result.replace(en, zh)
     return result
 
 
@@ -235,6 +314,20 @@ def process_java_file(file_path: Path) -> Tuple[bool, str]:
             content
         )
         
+        # 3. 翻译验证注解中的消息
+        # 匹配 @NotBlank(message = "..."), @NotNull(message = "..."), @Size(message = "...") 等
+        def replace_validation(match):
+            full_match = match.group(0)
+            message = match.group(1)
+            translated_message = translate_validation_message(message)
+            return full_match.replace(f'"{message}"', f'"{translated_message}"')
+        
+        content = re.sub(
+            r'message\s*=\s*"([^"]+)"',
+            replace_validation,
+            content
+        )
+        
         # 只有内容真的改变了才写入
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -264,6 +357,7 @@ def main():
     print("翻译内容：")
     print("  ✓ Javadoc 注释 (/** ... */)")
     print("  ✓ 异常消息字符串")
+    print("  ✓ 验证注解消息 (message = \"...\")")
     print("  ✗ 不翻译代码")
     print("  ✗ 不翻译单行注释")
     print("=" * 70)

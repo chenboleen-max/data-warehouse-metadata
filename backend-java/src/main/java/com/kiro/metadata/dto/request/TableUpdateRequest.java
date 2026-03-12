@@ -14,15 +14,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TableUpdateRequest {
     
-    @Size(max = 1000, message = "Description length cannot exceed 1000")
+    @Size(max = 1000, message = "描述长度不能超过1000")
     private String description;
     
-    @Size(max = 50, message = "Storage format length cannot exceed 50")
+    @Size(max = 50, message = "存储格式长度不能超过50")
     private String storageFormat;
     
-    @Size(max = 500, message = "Storage location length cannot exceed 500")
+    @Size(max = 500, message = "存储位置长度不能超过500")
     private String storageLocation;
     
-    @Min(value = 0, message = "Data size cannot be negative")
+    @Min(value = 0, message = "数据大小不能为负数")
     private Long dataSizeBytes;
 }

@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LoginRequest {
     
-    @NotBlank(message = "Username cannot be blank")
+    @NotBlank(message = "用户名不能为空")
     private String username;
     
-    @NotBlank(message = "Password cannot be blank")
+    @NotBlank(message = "密码不能为空")
     private String password;
 }
