@@ -1,0 +1,36 @@
+Generic single-database configuration with async support for MySQL.
+
+This directory contains Alembic migration scripts for the metadata management system.
+
+## Usage
+
+### Create a new migration
+```bash
+alembic revision --autogenerate -m "description of changes"
+```
+
+### Apply migrations
+```bash
+alembic upgrade head
+```
+
+### Rollback migrations
+```bash
+alembic downgrade -1
+```
+
+### View migration history
+```bash
+alembic history
+```
+
+### View current revision
+```bash
+alembic current
+```
+
+## Notes
+
+- All migrations use async SQLAlchemy with aiomysql driver
+- Database charset is set to utf8mb4 with utf8mb4_unicode_ci collation
+- Connection pooling is configured in app/core/database.py

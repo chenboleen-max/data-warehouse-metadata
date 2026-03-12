@@ -1,0 +1,43 @@
+{
+  "name": "kiro-web-frontend",
+  "version": "1.0.0",
+  "description": "数据仓库元数据管理系统前端",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "axios": "^1.6.5",
+    "element-plus": "^2.5.4",
+    "@element-plus/icons-vue": "^2.3.1",
+    "d3": "^7.8.5",
+    "echarts": "^5.4.3",
+    "vue-echarts": "^6.6.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/test-utils": "^2.4.3",
+    "vite": "^5.0.11",
+    "vue-tsc": "^1.8.27",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1",
+    "@playwright/test": "^1.41.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.1",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "prettier": "^3.2.4",
+    "fast-check": "^3.15.1",
+    "unplugin-auto-import": "^0.17.3",
+    "unplugin-vue-components": "^0.26.0"
+  }
+}

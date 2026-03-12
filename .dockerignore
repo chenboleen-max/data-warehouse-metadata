@@ -1,0 +1,40 @@
+# 后端
+backend-java/target/
+backend-java/.mvn/
+backend-java/mvnw
+backend-java/mvnw.cmd
+backend-java/.idea/
+backend-java/*.iml
+backend-java/.DS_Store
+
+# 前端
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.DS_Store
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 文档
+*.md
+!README.md
+
+# 测试
+**/test/
+**/*.test.js
+**/*.spec.js
+
+# 日志
+*.log
+logs/
